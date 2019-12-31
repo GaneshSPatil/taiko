@@ -1,0 +1,258 @@
+
+> taiko@1.0.3 test /Users/dharmenn/Workspace/gauge_project/taiko
+> npm run test:api && npm run test:unit
+
+
+> taiko@1.0.3 test:api /Users/dharmenn/Workspace/gauge_project/taiko
+> node test/unit-tests/taiko-test.js
+
+[32m ✔ All the exported functions are present in metadata[39m
+
+> taiko@1.0.3 test:unit /Users/dharmenn/Workspace/gauge_project/taiko
+> mocha 'test/unit-tests/**/*.test.js' --timeout 3000
+
+
+
+  $
+    text with xpath
+      ✓ should find text with xpath
+      ✓ test description with xpath
+      ✓ test text() with xpath
+    test with selectors
+      ✓ should find text with selectors
+      ✓ test description with selectors
+      ✓ test text with selectors
+      ✓ test text should throw if the element is not found (109ms)
+    test elementList properties
+      ✓ test get()
+      ✓ test description
+      ✓ test text()
+
+  button
+    button test
+      normal button
+        ✓ button exists() (167ms)
+        ✓ button description for different button types
+        - button text()
+        ✓ test text should throw if the element is not found (143ms)
+      button with label
+        ✓ exists with label() (50ms)
+        ✓ button description
+        - input type button with label()
+      button with label for
+        ✓ test exists with label for() (42ms)
+        ✓ button description
+        - test text with label for()
+      test element list
+        ✓ test text() to be first element text (71ms)
+        elements()
+          ✓ test get of elements (38ms)
+          ✓ test description of elements (41ms)
+          ✓ test text of elements (42ms)
+      button with contains match
+        ✓ should match button with partial text (38ms)
+      button with wrapped element text
+        ✓ should match button with child element text (159ms)
+      button with Hidden attribute
+        ✓ Should match hidden buttons
+
+  Checkbox
+    with inline text
+      ✓ test exists() (123ms)
+      ✓ test description
+      ✓ test check()
+      ✓ test check() to throw if the element is not found (112ms)
+      ✓ test check() triggers events (50ms)
+      ✓ test uncheck() (57ms)
+      ✓ test uncheck() to throw if the element is not found (106ms)
+      ✓ test isChecked()
+      ✓ test isChecked() to throw if no element is found (104ms)
+      ✓ test text should throw if the element is not found (115ms)
+    wrapped in label
+      ✓ test exists()
+      ✓ test description
+    using label for
+      ✓ test exists()
+      ✓ test description
+    test elementList properties
+      ✓ test get of elements
+      ✓ test description of elements
+      ✓ test isChecked of elements
+      ✓ test check of elements
+      ✓ test uncheck of elements
+    with hidden style
+      ✓ test finding hidden checkbox elements
+
+  Clear
+    input field
+      ✓ should clear content (175ms)
+      ✓ should wait for input to be clearable (204ms)
+    textarea
+      ✓ should clear whole content (66ms)
+    events
+      ✓ should be trigged after clearing textbox (221ms)
+
+  clearIntercept
+    ✓ should display success message if there are intercepts for the url
+    ✓ should display message if all intercepts are reset
+    ✓ should display failure message if there are no intercepts for the url
+
+  Click
+    scroll to click
+      ✓ test if auto scrolls to element before clicking (82ms)
+    With text nodes
+      ✓ should click
+    With proximity selector
+      ✓ should click
+    Text accross element
+      ✓ should click
+    Text as value
+      ✓ should click
+    Text as type
+      ✓ should click
+    With ghost element
+      ✓ should click the ghost element
+    With element covered by an overlay
+      ✓ should throw error (63ms)
+    With element disabled
+      ✓ should throw error if element is disabled
+
+  close browser successfully
+    - closeBrowser should return 'Browser closed' message
+
+  closeTab
+    ✓ should close the browser if there are no tabs to reconnect
+    ✓ should close the current tab and switch to last active target if no url given
+    ✓ should close the all matching tabs with given url switch to last active
+    ✓ should close all matching tabs if target is non active tab
+
+  Config tests
+    Test setConfig
+      For invalid config name
+        ✓ should throw exception
+      For valid config name
+        When valid config value is provided
+          ✓ should update the config
+        When invalid config value is provided
+          ✓ should throw error
+    Test determineWaitForNavigation
+      For undefined or null value
+        ✓ should return default value when provided value is undefined
+        ✓ should return default value when provided value is null
+      For correct value
+        ✓ should return provided value
+    Test determineRetryTimeout
+      For undefined or null value
+        ✓ should return default value when provided value is undefined
+        ✓ should return default value when provided value is null
+      For correct value
+        ✓ should return provided value
+    Test determineRetryInterval
+      For undefined or null value
+        ✓ should return default value when provided value is undefined
+        ✓ should return default value when provided value is null
+      For correct value
+        ✓ should return provided value
+    Test determineObserveDelay
+      with observe true
+        ✓ should return provided value
+        ✓ should return default value when provided value is null or undefined
+      with observe false
+        ✓ should return provided value
+        ✓ should return default value when provided value is null or undefined
+    Test setNavigationOptions
+      ✓ should return default options
+      ✓ should return given options
+    Test setBrowserOptions
+      ✓ should return default options
+      ✓ should set defaultConfig with given value
+      ✓ should return given options
+    Test setClickOptions
+      ✓ should return default options
+      ✓ should return given options
+
+  cookies
+    ✓ setCookie should throw error if url or domain is not specified
+    ✓ setCookie should throw error if cookie is not set
+    ✓ setCookie should set successfully
+    ✓ deleteCookie should delete all cookies if no cookie name is given
+    ✓ deleteCookie should throw error if domian or url is not specified along with cookie name
+
+  DropDown
+    using label for
+      ✓ test dropdown exists() (71ms)
+      ✓ test dropdown description
+      ✓ test dropdown text()
+      ✓ test text should throw if the element is not found (106ms)
+      ✓ test select()
+    Select using index
+      ✓ test select() using index (51ms)
+    wrapped in label
+      ✓ test exists()
+      ✓ test description
+      ✓ test text()
+    test logs for dropdown
+      ✓ should show exists
+      ✓ should show selected index
+      ✓ should show selected value
+    test elementList properties
+      ✓ test get of elements
+      ✓ test description of elements
+      ✓ test text of elements
+      ✓ test select of elements
+      ✓ test get value of elements
+
+  nested drop down
+    ✓ should bubble change event (98ms)
+
+  Element Search
+    Filter visible nodes
+      ✓ should return visible nodes
+      ✓ should use parentElement to determine visibility for text nodes
+
+  Evaluate
+    with selector
+      ✓ should return the result on the evaluation
+      ✓ should pass args to the callback
+    without selector
+      ✓ should pass root html element to the function to be evaluated
+      ✓ should pass args to the callback (175ms)
+      ✓ should return the result of the evaluation
+      ✓ should return the result of evaluation with async function
+      ✓ should pass args to the callback (153ms)
+
+  fileField
+    file field with type text
+      with inline text
+        ✓ test exists() (74ms)
+        ✓ test value() (70ms)
+        ✓ test value() should throw error if the element is not found
+        ✓ test description
+        - test text()
+        ✓ test text should throw if the element is not found
+      with wrapped text in label
+        ✓ test exists() (42ms)
+        ✓ test value() (72ms)
+        ✓ test description
+        - test text()
+      using label for
+        ✓ test exists()
+        ✓ test value()
+        ✓ test description
+        - test text()
+    hidden
+      ✓ exists when selectHiddenElement is provided
+      ✓ does not exists when selectHiddenElement is not provided (114ms)
+    test elementList properties
+      ✓ test get of elements
+      ✓ test description of elements
+      ✓ test value of elements
+      - test text of elements
+    using a file that does not exists
+      ✓ throws a error when the file does not exist
+
+  Focus
+    focus Element
+      ✓ should focus on the given element if it is focusable (84ms)
+      ✓ should throw error if the given element is not focusable (42ms)
+      ✓ should write into the first focusable element (45ms)

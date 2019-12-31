@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>radioButton</title>
+</head>
+
+<body>
+    <form><input type="radio" id="radioButtonWithInlineLabel" name="testRadioButton"
+            value="radioButtonWithInlineLabel">radioButtonWithInlineLabel</input><label><input name="testRadioButton"
+                type="radio" value="radioButtonWithWrappedLabel" /><span>radioButtonWithWrappedLabel</span></label>
+        <p><input id="radioButtonWithLabelFor" name="testRadioButton" type="radio"
+                value="radioButtonWithLabelFor" /><label for="radioButtonWithLabelFor">radioButtonWithLabelFor</label>
+        </p><input name="hiddenRadioButton" type="radio" id="hiddenRadioButton"
+            value="hiddenRadioButton">hiddenRadioButton</input><input type="reset" value="Reset">
+    </form><input type="radio" id="someRadioButton" name="testRadioButton"
+        value="someRadioButton">someRadioButton</input><button id="panel" style="display:none">show on check</button>
+    <script>document.getElementById("hiddenRadioButton").style.display = "none"; var elem = document.getElementById("radioButtonWithInlineLabel"); elem.addEventListener("click", myFunction); function myFunction() { document.getElementById("panel").style.display = "block"; }</script>
+</body>
+
+</html>
